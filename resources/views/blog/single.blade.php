@@ -20,10 +20,10 @@
 			@foreach($post->comments as $comment)
 				<div class="comment">
 					<div class="author-info">
-						<img src="" class="author-image">
+						<img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=wavatar" }}" class="author-image">
 						<div class="author-name">
 							<h4>{{ $comment->name }}</h4>
-							<p class="author-time">{{ $comment->created_at }}</p>
+							<p class="author-time">{{ date('F nS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
 						</div>
 
 					</div>
