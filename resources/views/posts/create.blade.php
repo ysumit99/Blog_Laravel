@@ -48,6 +48,8 @@
                     
                 </select>
 
+                {{ form::label('featured_image', 'Upload featured Image:') }}
+
 
     			{{ Form::label('body' , "Post Body:") }}
     			{{ Form::textarea('body',null,array('class' => 'form-control')) }}
