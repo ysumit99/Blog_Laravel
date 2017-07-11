@@ -7,6 +7,15 @@
 	
     {!! Html::style('css/select2.min.css') !!}
 
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'link code'
+        });
+    </script>
+
 @endsection
 
 @section('content')
