@@ -24,7 +24,7 @@
 		<div class="col-md-8 col-md-offset-2">
 			<h1>Create New Post</h1>
 			<hr>
-			{!! Form::open(array('route' => 'posts.store','data-parsley-validate' => '')) !!}
+			{!! Form::open(array('route' => 'posts.store','data-parsley-validate' => '', 'files' => true)) !!}
     			{{ Form::label('title','Title:') }}
     			{{ Form::text('title',null,array('class' => 'form-control','required' => '', 'maxlength' => '255')) }}
     			{{ Form::label('slug', 'Slug:')  }}
@@ -49,6 +49,7 @@
                 </select>
 
                 {{ form::label('featured_image', 'Upload featured Image:') }}
+                {{ form::file('featured_image') }}
 
 
     			{{ Form::label('body' , "Post Body:") }}
