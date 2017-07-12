@@ -10,35 +10,48 @@
           <div class="row">
             <div class="col-md-12">
                       <div class="jumbotron">
-                      <h1>Welcome to My Blog!</h1>
-                      <p class="lead">Thank You for visiting.This is my test website with Laravel.Please read my popular post!</p>
-                      <p><a class="btn btn-primary btn-lg" href="#" role="button">Popular post</a></p>
+                        <center>
+                          <h1>Welcome to My Blog!  <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></h1>
+                          <p class="lead">This blog features all technology and computer science related stuff! <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span></p>
+                        </center>
+                      
                       </div>
             </div>
           
           </div> <!--end of header .row -->
-
+          <br>
+          <div>
+                <center>
+                <h3>Latest Posts <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h3>
+                </center>
+          </div>
+          <br>
           <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-10 col-md-offset-2">
 
+              
                 @foreach($posts as $post)
+                <div class="row">
 
                   <div class="post">
-                      <h3>{{ $post->title }}</h3>
+                    <div class="col-md-8">
+                      <h3><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> {{ $post->title }}</h3>
                       <p>{{ substr(strip_tags($post->body), 0, 300) }}{{  strlen(strip_tags($post->body)) > 300 ? "..." : "" }}</p>
-                      <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="col-md-2 ">
+                      <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-success btn-block " style="margin-top: 25px;">Read More</a>
+                    </div>
                   </div>
 
+                  
+                </div>
                   <hr>
-
                 @endforeach
 
               </div>
 
 
-              <div class="col-md-3 col-md-offset-1">
-                  <h2>Sidebar</h2>
-              </div>
+              
           </div>
    
 

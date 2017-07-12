@@ -7,7 +7,9 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-		<img src="{{ asset('images/' . $post->image) }}" height="400" width="800" />
+		@if($post->image)
+		<img src="{{ asset('images/' . $post->image) }}" height="200" width="400" />
+		@endif
 			<h1>{{ $post->title }}</h1>
 			<p>{!! $post->body !!}</p>
 			<hr>

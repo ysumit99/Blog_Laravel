@@ -5,7 +5,7 @@
 
 @section('content')
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8 col-md-offset-2">
               <h1>Contact Me</h1>
               <hr>
               <form action="{{ url('contact') }}" method="POST">
@@ -25,7 +25,7 @@
                       <textarea id="message" name="message" class="form-control" >Type your message here..</textarea>
                   </div>
 
-                  <input type="submit" value="Send Message" class="btn btn-success">
+                  <input type="submit" value="Send Message" class="btn btn-success btn-block">
               </form>
             </div>
         </div>
