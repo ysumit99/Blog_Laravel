@@ -1,3 +1,6 @@
+This project was developed as my first MVC framework project using Laravel. I learned alot while developing this project and it gave me insight into how to convenient and organized development becomes once you get used to a MVC framework and especially Laravel.
+This project is live @ http://139.59.20.26 .There maybe certain features that may not function properly and still there are few bugs that need to be fixed. (As it is my first experience of hosting a website using VPS - Virtual Private Server, there are certian configurations that I need to make so that all the features of website start functioning as expected!!)
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
